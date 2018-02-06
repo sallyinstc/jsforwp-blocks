@@ -17,9 +17,7 @@ const blockIcon = {<svg width='20px' height='20px'xmlns="http://www.w3.org/2000/
         <path d="M25,55 C20.037,55 16,50.962 16,46 C16,45.448 16.447,45 17,45 C17.553,45 18,45.448 18,46 C18,49.86 21.141,53 25,53 C28.859,53 32,49.86 32,46 L32,22 C32,21.448 32.447,21 33,21 C33.553,21 34,21.448 34,22 L34,46 C34,50.962 29.963,55 25,55"
         />
     </g>
-    <text y="75" fontSize="5" fontWeight="bold" fontFamily="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Ben Davis</text>
-    <text y="80" fontSize="5" fontWeight="bold"
-    fontFamily="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
+
 </svg>;}
 
 /**
