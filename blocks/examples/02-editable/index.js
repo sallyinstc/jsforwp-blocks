@@ -33,21 +33,32 @@ export default registerBlockType(
             source: 'children',
             selector: '.message-body',
           }
+          title: {
+            type: 'array',
+            source: 'children',
+            selector: '.message-title',
+          }
         },
         edit: props => {
+          const onChangeTitle = value => {
+            props.setAttributes( { title: value } );
+          };
           const onChangeMessage = value => {
             props.setAttributes( { message: value } );
           };
           return (
             <div className={ props.className }>
-              <h2>{ __( 'Call to Action' ) }</h2>
+              <Editable
+                tagName="h2"
+                placeholder={ __( 'Add your custom message' ) }
+      					onChange={ onChangeMessage }
+      					value={ props.attributes.title }
+      				/>
               <Editable
                 tagName="div"
                 placeholder={ __( 'Add your custom message' ) }
       					onChange={ onChangeMessage }
       					value={ props.attributes.message }
-      					focus={ props.focus }
-      					onFocus={ props.setFocus }
       				/>
             </div>
           );
@@ -55,7 +66,7 @@ export default registerBlockType(
         save: props => {
           return (
             <div>
-              <h2>{ __( 'Call to Action' ) }</h2>
+              <h2 className="message-title">{ props.attributes.title }</h2>
               <div class="message-body">
                 { props.attributes.message }
               </div>
